@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PizzaController">
+   <children>
+      <GridPane prefHeight="370.0" prefWidth="378.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="BASELINE_LEFT" contentDisplay="BOTTOM" prefHeight="48.0" prefWidth="159.0" text="Pizza Type:">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="BOTTOM" text="Size:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Cheese:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cmbSize" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="cmbVeg" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Vegetarian:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Pineapple:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cmbCheese" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Green Pepper:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Ham:" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Quantity:" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cmbPin" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="cmbGreen" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="cmbHam" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label alignment="BASELINE_LEFT" contentDisplay="BOTTOM" text="Selection:" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddOrder" mnemonicParsing="false" prefHeight="20.0" prefWidth="78.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Button>
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Pizza Cost:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Text fx:id="txtPizzaCost" disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0" wrappingWidth="73.18309593200684" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label alignment="BASELINE_LEFT" contentDisplay="TOP" text="Order Cost:" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Cambria Bold" size="17.0" />
+               </font>
+            </Label>
+            <Text fx:id="txtTotalCost" disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0" wrappingWidth="73.18309593200684" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="txtQuan" prefHeight="26.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="txtArea" prefHeight="135.0" prefWidth="378.0" />
+   </children>
+</VBox>
